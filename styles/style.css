@@ -113,7 +113,7 @@ section ul li {
 }
 
 .certifications img {
-    width: 80px;
+    width: 240px; /* Triple del tamaño anterior */
     height: auto;
     border-radius: 10px;
 }
