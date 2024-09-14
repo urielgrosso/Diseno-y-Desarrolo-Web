@@ -12,6 +12,8 @@ body {
     color: #333;
     line-height: 1.6;
     padding: 20px;
+    max-width: 1200px; /* Ajusta el ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
 }
 
 /* Navegación */
@@ -21,15 +23,16 @@ nav {
     text-align: center;
     position: fixed;
     top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
     border-radius: 25px;
-    width: 90%;
-    z-index: 1000;
+    max-width: 1200px; /* Asegura que la barra tenga el mismo ancho máximo que las secciones */
+    margin: 0 auto; /* Centra la barra de navegación */
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
 }
 
 nav ul li {
@@ -58,6 +61,8 @@ header.presentation {
     padding: 20px;
     border-radius: 15px;
     color: white;
+    max-width: 1200px; /* Asegura que el ancho máximo de la sección coincida */
+    margin: 100px auto 0; /* Centra la sección y asegura que no se superponga con la barra de navegación */
 }
 
 header.presentation h1 {
@@ -85,16 +90,18 @@ section {
     padding: 20px;
     border-radius: 15px;
     margin-top: 30px;
+    max-width: 1200px; /* Asegura que el ancho máximo de la sección coincida */
+    margin: 30px auto 0; /* Centra la sección */
 }
 
 section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #007bff;
+    color: #007bff; /* Color azul para los encabezados h2 */
 }
 
 section ul {
-    list-style: none;
+    list-style: none; /* Elimina los puntos de las listas */
     padding-left: 0;
 }
 
@@ -105,15 +112,17 @@ section ul li {
     color: #333;
 }
 
-/* Logros Destacados */
+/* Sección de Certificaciones */
 .certifications {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten a diferentes tamaños de pantalla */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes dentro de la sección */
 }
 
 .certifications img {
-    width: 240px; /* Triple del tamaño anterior */
+    width: 100%; /* Ajusta la imagen al ancho disponible */
+    max-width: 200px; /* Limita el ancho máximo de las imágenes */
     height: auto;
     border-radius: 10px;
 }
@@ -134,4 +143,6 @@ footer {
     margin-top: 40px;
     font-size: 0.9rem;
     color: #888;
+    max-width: 1200px; /* Asegura que el ancho máximo del pie de página coincida */
+    margin: 40px auto 0; /* Centra el pie de página */
 }
