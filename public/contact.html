@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-<link rel="stylesheet" href="../styles/style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Uriel Grosso</title>
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <!-- Menú de Navegación -->
     <nav>
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="resume.html">Currículum</a></li>
-            <li><a href="services.html">Servicios</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-        </ul>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Uriel Grosso</a>
+    
+            <!-- Botón de hamburguesa -->
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+    
+            <!-- Menú de navegación -->
+            <ul id="nav-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="resume.html">Currículum</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="contact.html" class="active">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
 
+    <div class="nav-spacer"></div>
     <!-- Sección de Contacto -->
     <section>
-        <p>Para cualquier consulta o colaboración, no dudes en contactarme a través del siguiente botón:</p>
+        <h2>Contacto</h2>
+        <p>Para cualquier consulta o colaboración, no dudes en contactarme a través del siguiente formulario:</p>
 
-        <!-- Botón para enviar correo -->
-        <a href="mailto:ugrosso@uade.edu.ar">
-            <button type="button">Enviar Correo</button>
-        </a>
+        <!-- Formulario de contacto -->
+        <section class="contact-form">
+            <h2>Dejame tu mensaje</h2>
+            <form id="contactForm" novalidate>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+        
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
 
         <p>También puedes encontrarme en LinkedIn:</p>
-
         <!-- Enlace a LinkedIn -->
         <a href="https://www.linkedin.com/in/urielgrosso/" target="_blank">LinkedIn - Uriel Grosso</a>
     </section>
@@ -36,5 +57,19 @@
     <footer>
         <p>© 2024 Uriel Grosso | Todos los derechos reservados</p>
     </footer>
+
+    <script src="../scripts/contactValidation.js"></script>
+
+    <script>
+    function toggleMenu() {
+        const menu = document.getElementById('nav-menu');
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+    </script>
+
+    <!-- Botón Scroll to Top -->
+    <button id="scrollToTopBtn" style="display: none;">↑</button>
+    <script src="../scripts/scrollToTop.js"></script>
+
 </body>
 </html>

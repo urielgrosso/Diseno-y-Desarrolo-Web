@@ -9,13 +9,23 @@
 <body>
     <!-- Menú de Navegación -->
     <nav>
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="resume.html">Currículum</a></li>
-            <li><a href="services.html">Servicios</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-        </ul>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Uriel Grosso</a>
+    
+            <!-- Botón de hamburguesa -->
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+    
+            <!-- Menú de navegación -->
+            <ul id="nav-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="resume.html" class="active">Currículum</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
+
+    <div class="nav-spacer"></div>
 
     <!-- Sección de Currículum -->
     <section>
@@ -103,5 +113,17 @@
     <footer>
         <p>© 2024 Uriel Grosso | Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+
+    <!-- Botón Scroll to Top -->
+    <button id="scrollToTopBtn" style="display: none;">↑</button>
+    <script src="../scripts/scrollToTop.js"></script>
+
 </body>
 </html>
