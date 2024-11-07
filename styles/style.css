@@ -138,6 +138,13 @@ section p {
     text-align: left;
 }
 
+.logos img {
+    width: 100%; /* Las imágenes ocupan el 100% del contenedor */
+    max-width: 200px; /* El tamaño máximo es 200px */
+    height: auto; /* Mantener la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen no se distorsione */
+}
+
 /* Pie de página */
 footer {
     text-align: center;
@@ -288,6 +295,11 @@ nav ul li a:hover {
 
     #nav-menu li {
         margin: 10px 0;
+    }
+
+    .logos {
+        flex-direction: column; /* Acomoda las imágenes en columna en pantallas pequeñas */
+        gap: 15px;
     }
 }
 
